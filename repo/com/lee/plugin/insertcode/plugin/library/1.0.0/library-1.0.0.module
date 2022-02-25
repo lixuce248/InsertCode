@@ -1,0 +1,84 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.lee.plugin.insertcode.plugin",
+    "module": "library",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5",
+      "buildId": "jb76gaaefjdkfjaamcnpmfnkrm"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "library-1.0.0.jar",
+          "url": "library-1.0.0.jar",
+          "size": 32193,
+          "sha512": "0777736abdac519adbd4c0240bf7eb6ad67192d6bad34648e01361e98b1dd3cae06ed44f317e8238fe11914695c2cfef34db407eeb342003b5d8e7212047d7d7",
+          "sha256": "2da1b855045b69a8d66504f3f6e76352ff48a537b8c6bd4ffe73ac680efec4e4",
+          "sha1": "996cc83408c1fe1b3b7516bb08d62327c77abe7c",
+          "md5": "eaa1eeaa805846937267e62b5c9576f1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.10"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "javapoet",
+          "version": {
+            "requires": "1.13.0"
+          }
+        },
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "4.1.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "library-1.0.0.jar",
+          "url": "library-1.0.0.jar",
+          "size": 32193,
+          "sha512": "0777736abdac519adbd4c0240bf7eb6ad67192d6bad34648e01361e98b1dd3cae06ed44f317e8238fe11914695c2cfef34db407eeb342003b5d8e7212047d7d7",
+          "sha256": "2da1b855045b69a8d66504f3f6e76352ff48a537b8c6bd4ffe73ac680efec4e4",
+          "sha1": "996cc83408c1fe1b3b7516bb08d62327c77abe7c",
+          "md5": "eaa1eeaa805846937267e62b5c9576f1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+
+plugins {
+    id 'maven-publish'
+    id 'groovy'
+    id 'com.github.dcendents.android-maven'
+}
+group = 'com.lee.plugin.insertcode.plugin'
+// 描述
+description = '这是一个独立插件'
+// 版本号
+version = '1.0.0'
+
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10"
+
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.squareup:javapoet:1.13.0'
+    implementation 'com.android.tools.build:gradle:4.1.1'
+}
+
+//java-gradle插件
+apply plugin: 'java-gradle-plugin'
+
+
+//本地依赖插件时使用
+gradlePlugin {
+    plugins {
+        //插件名,每一个插件都可以有
+        buildSrcTestPlugin {
+            // 你的插件id，外部项目引用时需要
+            id = 'com.lee.plugin.insertcode.plugin'
+            // 插件的具体实现类
+            implementationClass = 'com.lee.plugin.insertcode.plugin.AndroidJunkCodePlugin'
+        }
+    }
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+publishing {
+    publications {
+        maven(MavenPublication) {
+            // 版本id，最终会根据这个id-version生成相应的插件
+            artifactId = 'com.lee.plugin.insertcode.plugin'
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            // 生成的插件位置
+            url = uri('../repo')
+        }
+    }
+}
