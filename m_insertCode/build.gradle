@@ -4,11 +4,11 @@ plugins {
     id 'groovy'
     id 'com.github.dcendents.android-maven'
 }
-group = 'com.lee.plugin.insertcode.plugin'
+group = 'com.lee.plugin'
 // 描述
 description = '这是一个独立插件'
 // 版本号
-version = '1.0.0'
+version = '1.0.1'
 
 
 dependencies {
@@ -30,7 +30,7 @@ gradlePlugin {
         //插件名,每一个插件都可以有
         buildSrcTestPlugin {
             // 你的插件id，外部项目引用时需要
-            id = 'com.lee.plugin.insertcode.plugin'
+            id = 'com.lee.plugin'
             // 插件的具体实现类
             implementationClass = 'com.lee.plugin.insertcode.plugin.AndroidJunkCodePlugin'
         }
@@ -42,7 +42,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             // 版本id，最终会根据这个id-version生成相应的插件
-            artifactId = 'com.lee.plugin.insertcode.plugin'
+            artifactId = 'insertcode'
             from components.java
         }
     }

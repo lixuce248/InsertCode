@@ -1,4 +1,4 @@
 include ':app'
-include ':library'
+include ':m_insertCode'
 
 rootProject.name = "InsertCode"

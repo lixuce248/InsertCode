@@ -134,7 +134,7 @@ class AndroidJunkCodeTask extends DefaultTask {
             typeBuilder.superclass(ClassName.get("android.app", "Activity"))
             typeBuilder.addModifiers(Modifier.PUBLIC)
             //onCreate方法
-            def bundleClassName = ClassName.get("android.os", "Bundle")阿斯顿
+            def bundleClassName = ClassName.get("android.os", "Bundle")
             typeBuilder.addMethod(MethodSpec.methodBuilder("onCreate")
                     .addAnnotation(Override.class)
                     .addModifiers(Modifier.PROTECTED)

@@ -15,4 +15,4 @@
 local.properties
 
 # Project exclude paths
-/library/build/
+/insertcode/build/
