@@ -11,7 +11,7 @@ buildscript {
        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath "com.github.lixuce248:InsertCode:1.0.0"
+        classpath "com.github.lixuce248:InsertCode:1.0.3"
     }
 }
 ```
@@ -20,7 +20,7 @@ buildscript {
 app目录的build.gradle模块中：
 ```groovy
 apply plugin: 'com.android.application'
-apply plugin: 'com.lee.plugin.insertcode.plugin'
+apply plugin: 'com.lee.plugin'
 
 androidJunkCode {
     variantConfig {
